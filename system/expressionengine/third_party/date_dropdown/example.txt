@@ -1,0 +1,44 @@
+<section class="sideblock">
+	<h2><i class="fa fa-gift pink"></i> Verjaardag</h2>
+	<ul class="sideblock-list">
+		{exp:date_dropdown:search 
+			month="{current_time format="%m"}" 
+			orderby="day" 
+			sort="asc" 
+			start_from="{current_time format="%d"}" 
+			limit="4" 
+			check_next_month="yes"
+			status="Members-id5|Beheerders-id6"
+		}
+			{if entry_ids}
+				{exp:channel:entries dynamic="no" fixed_order="{entry_ids}" status="Members-id5|Beheerders-id6" limit="4"}
+					<li>
+						<p class="date">{member_geboortedatum format="%d %F %Y"}</p>
+						<p><a href="/smoelenboek#{member_achternaam}">{member_voornaam} {member_tussenvoegsel} {member_achternaam}</a></p>
+					</li>
+				{/exp:channel:entries}
+			{/if}
+			
+			{if entry_ids == ''}
+				<li><p>Er zijn geen verjaardagen deze maand</p></li>
+			{/if}
+
+		{/exp:date_dropdown:search}
+	</ul>
+</section>
+
+
+{exp:channel:entries dynamic="no" entry_id="19"}
+	{datee format="%Y %m %d"}
+{/exp:channel:entries} 
+
+
+{exp:date_dropdown:search 
+			month="{current_time format="%m"}" 
+			orderby="day" 
+			sort="asc" 
+			limit="4" 
+			check_next_month="yes"
+		}
+				- {entry_ids} -
+		{/exp:date_dropdown:search}

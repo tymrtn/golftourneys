@@ -1,0 +1,21 @@
+1.4.1
+	Updated : Cleanup
+
+1.4
+	Updated : better date checking
+	Added : Datetime picker
+	Added : time option
+	Added : zenbu support
+
+1.3
+	Bugfix : Unable to load the requested class: date_dropdown_lib error
+	Updated : EE 2.9 support
+
+1.2
+	Added : support for Entry API
+
+1.1
+	Added : Support for Bulk Edit
+
+1.0
+	Init release.

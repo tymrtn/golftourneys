@@ -1,0 +1,94 @@
+{embed='includes/htmlHead'}
+{embed='includes/header'}
+{embed='includes/mainNav'}
+{embed='includes/memberNav'}
+              
+            <section class="internal-main">
+            {exp:channel:entries entry_id="7"}
+                <h1>{title}</h1>
+                <section id="internal-left">
+				{body}
+				
+{exp:freeform:form
+    form_id="1"
+    required="email|user_message"
+    recipients="yes"
+    recipient1="Melody Paxton|mellygurl@gmail.com"
+    return="home/thank-you"
+    status="open"
+}
+    
+	<p>* <em>Required Fields</em></p>
+
+    <dl>
+    	<dt><label>First Name</label></dt>
+    	<dd>{freeform:field:first_name attr:class="medium"}</dd>
+    </dl>
+        <dl>
+    	<dt><label>Last Name</label></dt>
+    	<dd>{freeform:field:last_name attr:class="medium"}</dd>
+    </dl>
+        <dl>
+    	<dt><label>Email Address *</label></dt>
+    	<dd>{freeform:field:email attr:class="medium"}</dd>
+    </dl>
+        <dl>
+    	<dt><label>Comment *</label></dt>
+    	<dd>{freeform:field:user_message attr:class=""}</dd>
+    </dl>
+    
+    {if freeform:captcha}
+        <p>Please enter the word you see in the image below:</p>
+        <p>{freeform:captcha}<br />
+        <input type="text" name="captcha" style="width:140px;" /></p>
+    {/if}
+    <p>{freeform:submit attr:class="form-button submit-button"}</p>
+    {if freeform:no_results}
+        <p>
+            Specified form was not found. Please make sure you have
+            specified the correct short name of the form in the
+            <b>form_name</b> parameter.
+        </p>
+    {/if}
+{/exp:freeform:form}
+			{/exp:channel:entries}
+			</section>
+			
+    <section id="internal-right">
+        <h2>Find a Tournament</h2>
+                    <input class="small" type="text" placeholder="Enter Zip Code" />
+                    <input type="submit" value="GO!" class="form-button button"/>
+                    <h2>Upcoming Tournaments</h2>
+                        <div class="in-tourney-info">
+                            <div class="tourney-date">SEPT <b>15</b> 2013</div>
+                            <div class="tourney-details">
+                                <h3>1st Annual Clothing Our Kids Charity Golf Tournament</h3>
+                                <p><strong>Lebanon, TN</strong></p>
+                                <p>Five Oaks Golf and Country Club</p>
+                            </div>
+                        </div>
+                        <div class="in-tourney-info">
+                            <div class="tourney-date">SEPT <b>15</b> 2013</div>
+                            <div class="tourney-details">
+                                <h3>1st Annual Clothing Our Kids Charity Golf Tournament</h3>
+                                <p><strong>Lebanon, TN</strong></p>
+                                <p>Five Oaks Golf and Country Club</p>
+                            </div>
+                        </div>
+                        <div class="in-tourney-info">
+                            <div class="tourney-date">SEPT <b>15</b> 2013</div>
+                            <div class="tourney-details">
+                                <h3>1st Annual Clothing Our Kids Charity Golf Tournament</h3>
+                                <p><strong>Lebanon, TN</strong></p>
+                                <p>Five Oaks Golf and Country Club</p>
+                            </div>
+                        </div>
+                        <div class="clear"></div>
+    </section>
+            </section>
+            <div class="clear"></div>
+        </section>
+        </section>
+    </section>
+
+ {embed='includes/footer'}

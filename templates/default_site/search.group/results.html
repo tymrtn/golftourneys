@@ -1,0 +1,49 @@
+{embed='includes/htmlHead'}
+{embed='includes/header'}
+{embed='includes/mainNav'}
+{embed='includes/memberNav'}
+            
+		<section class="internal-main">
+            <h2> {exp:search:total_results} Result(s) for {exp:search:keywords}</h2>
+            <div id="tourney-search">
+                       
+            <table border="0" cellpadding="6" cellspacing="1" width="100%">
+   				 <tr>
+        			<th>{lang:title}</th>
+       			 	<th>{lang:excerpt}</th>
+        			<th>{lang:author}</th>
+        			<th>{lang:date}</th>
+   				 </tr>
+
+			{exp:search:search_results switch="resultRowOne|resultRowTwo"}
+
+    			<tr class="{switch}">
+        			<td width="30%" valign="top"><b><a href="{auto_path}">{title}</a></b></td>
+        			<td width="30%" valign="top">{excerpt}</td>
+        			<td width="10%" valign="top"><a href="{member_path='member/index'}">{author}</a></td>
+        			<td width="10%" valign="top">{entry_date format="%m/%d/%y"}</td>
+
+    		{if count == total_results}
+        			</table>
+    		{/if}
+
+    			{paginate}
+        			<p>Page {current_page} of {total_pages} pages {pagination_links}</p>
+    			{/paginate}
+
+			{/exp:search:search_results}
+
+			</table>
+            </div>
+		</section>
+			
+			
+    
+            </section>
+            <div class="clear"></div>
+        </section>
+        </section>
+    </section>
+
+
+{embed='includes/footer'}

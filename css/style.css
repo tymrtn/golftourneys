@@ -1,0 +1,498 @@
+@charset "UTF-8";
+/* CSS Document */
+
+body{
+  margin:0;
+  padding:0;
+  font-family: Proxima Nova, Helvetica, Arial, sans-serif;
+  background:#1e2804;
+  color:#333;
+}
+
+h1, h3, h4, h5, p{
+  margin:0;
+  padding:0;
+}
+
+h2{
+  margin:0;
+  padding:0 0 .65em 0;
+}
+
+a{
+  text-decoration:none;
+  color:#005bc1;
+}
+
+a:hover{
+  color:#48b3f4;
+}
+
+.meta-info p{
+  display:inline-block;
+  font-style:italic;
+  color:#666;
+  font-size:90%;
+  margin-bottom:.15em;
+}
+
+header{
+  background: url(../images/header_bg.png) top center repeat;
+  padding-top:10px;
+  height:93px;
+  width:100%;
+  border:none;
+}
+
+header logo{
+  float:left;
+  width:275px;
+  height:78px;
+}
+
+#header-right{
+  float:right;
+}
+
+.form-button{
+  background:#005bc1;
+  color:#fff;
+  border: none;
+  box-shadow:2px 2px 2px #333;
+  font-size:12pt;
+  padding:6px;
+  height:28px;
+  text-transform:uppercase;
+/*  background: -moz-linear-gradient(top, #005bc1 0%, #3d7cd4 50%, #005bc1 100%); /* FF3.6+ */
+/*background: -webkit-gradient(linear, top left, top right, color-stop(0%,#005bc1), color-stop(50%,#f48413), color-stop(100%,#753017)); /* Chrome,Safari4+ */*/
+/*background: -webkit-linear-gradient(top, #005bc1 0%,#3d7cd4 50%,#005bc1 100%); /* Chrome10+,Safari5.1+ */*/
+/*background: -o-linear-gradient(top, #005bc1 0%,#3d7cd4 50%,#005bc1 100%); /* Opera 11.10+ */*/
+/*background: -ms-linear-gradient(top, #005bc1 0%,#3d7cd4 50%,#005bc1 100%); /* IE10+ */*/
+/*background: linear-gradient(to bottom, #005bc1 0%,#3d7cd4 50%,#005bc1 100%); /* W3C */*/*/
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#005bc1', endColorstr='#005bc1',GradientType=1 ); /* IE6-9 */
+border-radius: 3px;
+}
+
+.internal-form-cntnr form{
+  width:895px !important;
+  display:block;
+}
+
+.internal-form-cntnr #tourney-search ul li{
+  display: inline-block;
+  float:none;
+}
+
+.internal-form-cntnr h3{
+  margin-bottom:10px;
+}
+
+fieldset{
+  border:none;
+  width:100%;
+}
+
+input{
+  height:20px;
+  margin-bottom:10px;
+}
+
+section#main{
+  background: url(../images/bgDay.jpg) no-repeat 50% top;
+}
+
+section.wrap{
+  width:960px;
+  margin:0 auto;
+  padding-bottom:25px;
+}
+
+section.container{
+  background: url(../images/main_cntnr.png) top center repeat;
+  padding:1em 1em 2em 1em;
+  margin:10px 0 0 0; 
+}
+
+.cntnr-top{
+  text-align:right;
+  padding-bottom:10px;
+}
+
+
+.cntnr-main{
+  float:left;
+}
+
+#home-left{
+  position:relative;
+  width:550px;
+  float:left;
+}
+
+#home-left img{
+  border:8px solid #fff;
+  box-shadow:2px 2px 2px #666;
+  width:541px;
+  height:auto;
+}
+
+#home-left .slider-caption a{
+  background:#005bc1;
+  opacity:0.9;
+  position:absolute;
+  bottom:11px;
+  left:8px;
+  width:521px;
+  padding:10px;
+  color:#fff;
+  text-shadow:1px 1px 1px #333;
+}
+
+#home-left .slider-caption h1{
+  font-size:1.35em;
+  margin:0;
+  padding:0 0 .2em 0;
+}
+
+#home-left .slider-caption p{
+  margin:0;
+  padding:0;
+}
+
+#home-right{
+  width:318px;
+  padding:15px;
+  float:right;
+  background:#e4e4e4;
+  border:1px solid #ccc;
+  margin-left:28px;
+}
+
+h2{
+  font-size:1em;
+  color:#666;
+  font-weight:normal;
+  text-transform:uppercase;
+}
+
+#home-right input{
+  margin-bottom:1.75em;
+}
+
+.tourney-date{
+  font-size:14px;
+  width:40px;
+  padding:0 5px 0 0;
+  text-align:center;
+  border-right:1px solid #333;
+  float:left;
+  margin-right:10px;
+}
+
+.tourney-date b{
+  font-size:22px;
+}
+
+h3{
+  font-size:.95em;
+  color:#005bc1;
+  text-transform:uppercase;
+}
+
+.tourney-details{
+  float:left;
+  width:255px;
+  font-size:.85em;
+  margin-bottom:1.075em;
+}
+
+.tourney-details p{
+  font-size:.9em;
+}
+
+.home-bottom{
+  display:inline-block;
+}
+
+.internal-main{
+  display:inline-block;
+}
+
+.internal-main.blog #internal-left img{
+  max-width:603px;
+  margin-bottom:.25em;
+  height:auto;
+}
+
+.internal-main #tourney-search{
+  margin-top:0;
+}
+
+#tourney-search{
+  background:#fff;
+  border:1px solid #ccc;
+  padding:15px;
+  margin-top:25px;
+  float:left;
+}
+
+#tourney-search label{
+  display:block;
+  color:#666;
+  font-weight:lighter;
+  text-transform:uppercase;
+  font-size:12px;
+  margin-bottom:5px;
+}
+
+#tourney-search input{
+  display:inline;
+  padding:2.5px;
+}
+
+#tourney-search select{
+  height:27px;
+  border:1px solid #999;
+}
+
+#tourney-search ul{
+  list-style-type:none;
+  display:block;
+}
+
+#tourney-search ul li{
+  float:left;
+  margin-left:2em;
+}
+
+#tourney-search ul li input.submit-button{
+  float:right;
+  margin-top:1.1em;
+  margin-left:11.25em;
+  padding:5px 10px;
+  font-style:normal;
+}
+
+input.small{
+  width:100px;
+}
+
+input.medium{
+  width:200px;
+}
+
+#internal-left{
+  width:65%;
+  float:left;
+}
+
+#internal-right{
+  width:30%;
+  padding:1%;
+  margin-left:2.75%;
+  float:left;
+  background:#e4e4e4;
+  border:1px solid #ccc;
+}
+
+#internal-right input{
+  margin-bottom:20px;
+}
+
+.in-tourney-info .tourney-details{
+  width:215px !important;
+  font-size:83%;
+  line-height:1.2;
+}
+
+.internal-main h1{
+  font-size:1.45em;
+  margin-bottom:10px;
+  font-weight:normal;
+  color:#005bc1;
+  text-transform: uppercase;
+  width:100%;
+  border-bottom:1px solid #ccc;
+}
+
+#internal-left p{
+  margin-bottom:10px;
+}
+
+.tourney-preview{
+  background:#e6e6e6;
+  border:1px solid #ccc;
+  margin:20px 0 0 0;
+  display:inline-block;
+  width:97%;
+  padding:1.5%;
+  line-height:1.25;
+  font-size:92%;
+  color:#646464;
+  position:relative;
+}
+
+.preview-detail{
+  width:72%;
+  display:block;
+  float:left;
+}
+
+.preview-detail h3{
+  font-size:1.15em;
+  font-weight:normal;
+}
+
+.preview-detail span{
+  color:#005bc1;
+  margin-left:15px;
+}
+
+.preview-detail span:first-child{
+  margin-left:0;
+}
+
+.reg_closed, .reg_now{
+  background:#999;
+  padding:5px;
+  text-align:center;
+  width:200px;
+  float:right;
+  color:#fff;
+  text-transform:uppercase;
+  position:absolute;
+  bottom:15px;
+  right:15px;
+  }
+
+  .reg_now{
+    background:#005bc1;
+    width:140px;
+    padding:9px 5px 0 5px;
+    background: -moz-linear-gradient(top, #005bc1 0%, #3d7cd4 50%, #005bc1 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, top left, top right, color-stop(0%,#005bc1), color-stop(50%,#f48413), color-stop(100%,#753017)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top, #005bc1 0%,#3d7cd4 50%,#005bc1 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top, #005bc1 0%,#3d7cd4 50%,#005bc1 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top, #005bc1 0%,#3d7cd4 50%,#005bc1 100%); /* IE10+ */
+background: linear-gradient(to bottom, #005bc1 0%,#3d7cd4 50%,#005bc1 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#005bc1', endColorstr='#005bc1',GradientType=1 ); /* IE6-9 */
+  }
+
+  .page_nav {
+	  clear:both;
+	  padding: 15px 0;
+	  width: 100%;
+	  height: 47px;
+  }
+.page_nav a {
+  padding:6px;
+  height:17px;
+  margin:1em 0 0 0;
+  width:75px;
+  text-align:center;
+  background-color: #ffffff;
+  color: #005bc1;
+  float: left;
+}
+.page_nav a.next {
+  background-color: #005bc1;
+  color: #ffffff;
+  float:right;
+}
+005bc1
+ 
+ul{
+  margin:0;
+  padding:10px 0;
+}
+
+nav ul li{
+  display:inline;
+  margin:0 1em;
+}
+
+nav ul li:first-child{
+  margin-left:0;
+}
+
+nav ul li a{
+  color:#fff;
+  text-transform:uppercase;}
+
+nav ul li ul{
+  display:none;
+}
+
+footer{
+  background:#1e2804;
+  font-size:.8em;
+  padding-top:2em;
+}
+
+footer logo{
+  float:left;
+  margin-right:2em;
+  padding-bottom:2em;
+}
+
+footer .footer-links{
+  margin-top:.75em;
+  float:left;
+
+}
+
+footer nav ul li a, footer a{
+  color:#48b3f4;
+  text-transform: capitalize;
+}
+
+footer ul{
+  padding:0 0 3px 0;
+}
+
+footer ul li{
+  display:inline;
+  padding:0 1em;
+  border-left:1px solid #999;
+  margin:0;
+}
+
+footer ul li:first-child{
+  padding-left:0;
+  border-left:0;
+}
+
+footer p{
+  margin:0;
+  padding:3px 0 0 0;
+  color:#f4f4f4;
+}
+
+footer p a{
+  padding:0 .75em;
+  border-left:1px solid #999;
+}
+
+footer p a:first-child{
+  border-left: none;
+}
+
+/* CONTACT FORM */
+
+dd, dt{ display:inline-block;
+  width:150px;
+}
+
+dt{
+  vertical-align:top;
+}
+
+.submit-button{
+  float:right;
+  margin-right:40px;
+}
+
+input.date {
+	width: 150px;
+	color: #000;
+}

@@ -1,0 +1,57 @@
+{embed='includes/htmlHead'}
+{embed='includes/header'}
+{embed='includes/mainNav'}
+{embed='includes/memberNav'}
+            
+            <section class="internal-main blog">
+            {exp:channel:entries channel="blog" limit="5"}
+                <h1>{title}</h1>
+                <section id="internal-left">
+                {if blog_image}<img src="{blog_image}" />{/if}
+                <div class="meta-info">
+                <p>Posted by</p> {exp:zoo_visitor:details member_id="{author_id}"} {visitor:member_firstname} {visitor:member_lastname}{/exp:zoo_visitor:details}</p> <p>on {entry_date format="%F %d, %Y"}</p>
+                </div>
+				{body}
+			{/exp:channel:entries}
+			</section>
+			
+			
+    <section id="internal-right">
+        <h2>Find a Tournament</h2>
+                    <input class="small" type="text" placeholder="Enter Zip Code" />
+                    <input type="submit" value="GO!" class="form-button button"/>
+                    <h2>Upcoming Tournaments</h2>
+                        <div class="in-tourney-info">
+                            <div class="tourney-date">SEPT <b>15</b> 2013</div>
+                            <div class="tourney-details">
+                                <h3>1st Annual Clothing Our Kids Charity Golf Tournament</h3>
+                                <p><strong>Lebanon, TN</strong></p>
+                                <p>Five Oaks Golf and Country Club</p>
+                            </div>
+                        </div>
+                        <div class="in-tourney-info">
+                            <div class="tourney-date">SEPT <b>15</b> 2013</div>
+                            <div class="tourney-details">
+                                <h3>1st Annual Clothing Our Kids Charity Golf Tournament</h3>
+                                <p><strong>Lebanon, TN</strong></p>
+                                <p>Five Oaks Golf and Country Club</p>
+                            </div>
+                        </div>
+                        <div class="in-tourney-info">
+                            <div class="tourney-date">SEPT <b>15</b> 2013</div>
+                            <div class="tourney-details">
+                                <h3>1st Annual Clothing Our Kids Charity Golf Tournament</h3>
+                                <p><strong>Lebanon, TN</strong></p>
+                                <p>Five Oaks Golf and Country Club</p>
+                            </div>
+                        </div>
+                        <div class="clear"></div>
+    </section>
+            </section>
+            <div class="clear"></div>
+        </section>
+        </section>
+    </section>
+
+
+{embed='includes/footer'}

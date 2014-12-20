@@ -1,0 +1,120 @@
+{embed='includes/htmlHead'}
+{embed='includes/header'}
+{embed='includes/mainNav'}
+{embed='includes/memberNav'}
+           
+            <section class="internal-main">
+                <h1>Registration</h1>
+                
+                <section id="internal-left">
+{if last_segment == "success"}
+Account created. You can <a href="{path='members/index'}">login</a> now. Depending on your member activation settings you will receive an email to confirm your registration.
+{if:elseif logged_in}
+You are already registered and logged in. <a href="{path=logout}">Logout</a> or go to your <a href="{path='members/dashboard'}">profile</a>.
+{if:else}
+{exp:zoo_visitor:registration_form return='members/success' include_jquery="no"}
+<fieldset>
+	<h4>Login details</h4>
+
+	<p>
+		<label for="member_firstname">{label:member_firstname}:</label>
+		<input type="text" class="medium" name="member_firstname" id="member_firstname" value="{if member_firstname}{member_firstname}{/if}"/>
+	</p>
+
+	<p>
+		<label for="member_lastname">{label:member_lastname}:</label>
+		<input type="text" class="medium" name="member_lastname" id="member_lastname" value="{if member_lastname}{member_lastname}{/if}"/>
+	</p>
+	<p>
+		<label for="member_email">Email*:</label>
+		<input type="text" class="medium" name="member_email" id="member_email" value="{if member_email}{member_emailemail}{/if}"/>
+		<br/>(this will be your login/username if 'use email as username' has been set)
+	</p>
+
+	<p>
+		<label for="password">Password*:</label>
+		<input type="password" class="medium" name="password" id="password" value="{if password}{password}{/if}"/>
+	</p>
+
+	<p>
+		<label for="password_confirm">Confirm password*:</label>
+		<input type="password" class="medium" name="password_confirm" id="password_confirm" value="{if password_confirm}{password_confirm}{/if}"/>
+	</p>
+
+	<p>
+		<label for="terms_of_service">Terms of service:</label>
+		<textarea name='terms' rows='4' readonly>All messages posted at this site express the views of the author, and do not necessarily reflect the views of the owners and administrators of this site.By registering at this site you agree not to post any messages that are obscene, vulgar, slanderous, hateful, threatening, or that violate any laws. We will permanently ban all users who do so.We reserve the right to remove, edit, or move any messages for any reason.</textarea>
+	</p>
+
+	<p>
+		<label for="accept_terms">Accept terms of service?*</label>
+		<input type='checkbox' name='accept_terms' value='y' {if accept_terms == "y"}checked="checked"{/if} />
+	</p>
+
+	{if captcha}
+	<p>
+		<label for="captcha">{lang:captcha}*</label>
+		{captcha}<br/>
+		<input type="text" id="captcha" name="captcha" value="" size="20" maxlength="20" style="width:140px;"/>
+	</p>
+	{/if}
+</fieldset>
+<p>
+	<input type="submit" value="Register" class="form-submit"/>
+</p>
+<p>* Required fields</p>
+
+{/exp:zoo_visitor:registration_form}
+{/if}
+
+<p><strong><em>Had to add this dummy text because it was throwing off the styling of the page.</em></strong></p>
+
+<p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+
+<p>Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.</p>
+
+<p>Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.</p>
+
+<p>Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a,</p>
+
+
+				</section>
+			
+    <section id="internal-right">
+        <h2>Find a Tournament</h2>
+                    <input class="small" type="text" placeholder="Enter Zip Code" />
+                    <input type="submit" value="GO!" class="form-button button"/>
+                    <h2>Upcoming Tournaments</h2>
+                        <div class="in-tourney-info">
+                            <div class="tourney-date">SEPT <b>15</b> 2013</div>
+                            <div class="tourney-details">
+                                <h3>1st Annual Clothing Our Kids Charity Golf Tournament</h3>
+                                <p><strong>Lebanon, TN</strong></p>
+                                <p>Five Oaks Golf and Country Club</p>
+                            </div>
+                        </div>
+                        <div class="in-tourney-info">
+                            <div class="tourney-date">SEPT <b>15</b> 2013</div>
+                            <div class="tourney-details">
+                                <h3>1st Annual Clothing Our Kids Charity Golf Tournament</h3>
+                                <p><strong>Lebanon, TN</strong></p>
+                                <p>Five Oaks Golf and Country Club</p>
+                            </div>
+                        </div>
+                        <div class="in-tourney-info">
+                            <div class="tourney-date">SEPT <b>15</b> 2013</div>
+                            <div class="tourney-details">
+                                <h3>1st Annual Clothing Our Kids Charity Golf Tournament</h3>
+                                <p><strong>Lebanon, TN</strong></p>
+                                <p>Five Oaks Golf and Country Club</p>
+                            </div>
+                        </div>
+                        <div class="clear"></div>
+    </section>
+            </section>
+            <div class="clear"></div>
+        </section>
+        </section>
+    </section>
+
+ {embed='includes/footer'}

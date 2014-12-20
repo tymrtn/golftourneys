@@ -1,0 +1,9 @@
+        <section class="container">
+            <section class="cntnr-top">
+            	{if logged_in}
+            		{exp:zoo_visitor:details}
+            			Welcome back {exp:zoo_visitor:details}{visitor:username}{/exp:zoo_visitor:details} |  <a href="{path='members/dashboard'}">My Dashboard</a> | <a href="{path=logout}">Logout</a>
+				{if:else}
+					<a href="{path='members/index'}">Sign In</a> | <a href="{path='members/register'}">Sign Up</a>
+				{/if}
+            </section> 

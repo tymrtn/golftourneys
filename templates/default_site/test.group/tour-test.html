@@ -1,0 +1,27 @@
+{embed='includes/htmlHead'}
+{embed='includes/header'}
+{embed='includes/mainNav'}
+{embed='includes/memberNav'}
+           
+<section class="internal-main">
+
+{exp:channel:form channel="test" error_handling="inline" return="test/tour-test"}
+{if logged_in}<label>Title</label>
+<input type="text" name="test_field_1">
+<input type="submit" name="submit" value="submit" />
+{if:else}
+<label>Title</label>
+<input type="text" name="test_field_1">
+<input type="submit" name="submit" value="submit" />
+{/if}
+{/exp:channel:form}
+</section>
+			
+    
+            </section>
+            <div class="clear"></div>
+        </section>
+        </section>
+    </section>
+
+ {embed='includes/footer'}

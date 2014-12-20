@@ -1,0 +1,93 @@
+    <footer>
+        <section class="wrap">
+            <a href="{site_url}"><logo><img class="f-logo" src="{site_url}images/footer_logo.png" /></logo></a>
+            <div class="footer-links">
+                <nav>
+                    <ul>
+                        <li><a href="{path='home/index'}">Home</a></li>
+                        <li><a href="{path='find-a-tournament/index'}">Find a Tournament</a></li>
+                        <li><a href="{path='post-a-tournament/index'}">Post a Tournament</a></li>
+                        <li><a href="{path='home/faq'}">FAQ</a></li>
+                        <li><a href="{path='home/about'}">About</a>                            
+                            <ul>
+                                <li><a href="{path='home/become-a-member'}">Become a Member</a></li>
+                                <li><a href="{path='home/purpose'}">Purpose</a></li>
+                                <li><a href="{path='home/golf-courses'}">Golf Courses</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="{path='blog/index'}">Blog</a></li> 
+                        <li><a href="{path='home/contact-golf-tourneys'}">Contact Us</a></li>
+                    </ul>
+                </nav>
+                <div id="ftr-member-login">
+                    <ul>
+                        <li><a href="#">My Profile</a></li>
+                        <li><a href="#">My Teams</a></li>
+                        <li><a href="#">Attending Tournaments</a></li>
+                    </ul>
+                </div>
+                <div id="copyright">
+                
+                    <p>Copyright © 2014 All Rights Reserved <a href="{path='home/privacy-policy'}">Privacy Policy </a>  <a href="{path='home/terms-of-use'}">Terms of Use</a></p>
+                </div>
+            </div>    
+            <div class="clear"></div>
+        </section
+
+    </footer>
+    
+    <script type="text/javascript">
+       	 
+        $(document).ready(function()
+{
+    $('fieldset').not(':first').hide();
+    $('.next-section').on('click', function(e)
+    {
+        e.preventDefault();
+        target = $(this).attr('href');
+        $('fieldset').hide();
+        $(target).fadeIn();
+    });
+});
+        
+       </script>
+       <script type="text/javascript">
+       
+$(document).ready(function(){
+
+ $( "#sortable" ).sortable({
+     containment: "parent"
+    });
+$('.fields').on('click', '.delete_row', function(e){
+
+  e.preventDefault();
+  $(this).parent().remove();
+  if ($('.fields div').length < 1){
+   $('#new').val('create first row');
+  }
+});
+
+var $clone = $(".fields div:eq(0)").clone().html();
+var $button_txt = $('#new').val();
+count = 1;
+$('#new').on('click', function(e){
+  e.preventDefault();
+  if ($('#new').val() != $button_txt){
+   $('#new').val($button_txt);
+  }
+  var $counter = count++;
+  var $new_row = $clone.replace(/row_new_0/g,'row_new_'+$counter);
+
+  $(".fields").append('<div class="field">'+$new_row+'</div>');
+});
+
+});
+	</script>
+  <script>
+  $(function() {
+    $( "#datepicker1" ).datepicker();
+    $( "#datepicker2" ).datepicker();
+  });
+  </script>
+	
+       

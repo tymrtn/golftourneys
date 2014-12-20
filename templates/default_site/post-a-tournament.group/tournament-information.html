@@ -1,0 +1,532 @@
+{embed='includes/htmlHead'}
+{embed='includes/header'}
+{embed='includes/mainNav'}
+{embed='includes/memberNav'}
+            
+<section class="internal-main">
+  <h1>Post A Tournament</h1>
+  <div id="tourney-search">
+
+    {exp:channel:form channel="tournament" include_jquery=“no” include_assets="no" return="post-a-tournament/index"}
+                
+      <fieldset id="section_1">
+            	<h2>Step 1. Before you get started, create a GT.com account or log in... </h2>
+
+				<p>Putting this section on hold until I get the form working.</p>
+				
+
+			    <div class="page_nav">
+    				<a href="#section_2" class="next-section form-button">Next</a>
+    			</div>
+      </fieldset>
+          			
+      <fieldset id="section_2">
+    		<h2>Step 2. Par or Birdie?</h2>
+    		<p>As the tournament organizer, you'll decide between the free Par posting and the low-cost Birdie option. <a href="/">Click here</a> to learn more about the services and costs associated with each alternative.</p>
+    			<ul>
+    				<li>
+    					<input type="radio" name="package_birdie" id="birdie" value="birdie" {checked}><label for="package_birdie">Birdie Package - Yes, I want to allow users to register for this tournament using the website.</label>
+    				</li>
+    				<li>
+              <input type="radio" name="package_par" id="par" value="par" {checked}><label for="package_par">Par Package - No, I do not want to allow users to register for this tournament using the website.</label>
+    					
+    				</li>
+    			</ul>
+    			
+			    <div class="page_nav">
+    				<a href="#section_3" class="next form-button">Next</a>
+    				<a href="#section_1" class="form-button">Back</a>
+    			</div>
+
+      </fieldset>
+
+      <fieldset id="section_3">
+  			<h2>Step 3. Tournament information</h2>
+   				 <ul>
+        			<li>
+            			<label for="title">Tournament Name</label>
+            			<input type="text" name="title" id="title" value="{title}" size="50" maxlength="100" onkeyup="liveUrlTitle();">
+        			</li>
+        			<li>
+            			<label for="tour_body">Tournament Description</label>
+            			<textarea class="" name="tournament_body"></textarea>
+        			</li>
+    			</ul>
+             <p>More information about formatting options</p>
+             
+             <h2>Tournament Details</h2>
+             	<ul>
+             		<li>
+            			<label>Tournament Date & Time *</label>
+						<input type="text" id="datepicker1" name="tour_date">
+    				<select name="tour_time" id="tour_time">
+            			{options:tour_time}
+                		<option value="{option_value}"{selected}>{option_name}</option>
+            			{/options:tour_time}
+            		</select>
+    				<select name="tour_time_format" id="tour_time_format">
+            			{options:tour_time_format}
+                		<option value="{option_value}"{selected}>{option_name}</option>
+            			{/options:tour_time_format}
+            		</select>
+            		<br />
+             			Ex. Tuesday 25, August 2012 09:00 AM
+             		</li>
+             		<li>
+             			<label for="team_size">Team Size *</label>
+             			<input class="small" name="team_size" id="team_size">
+             		</li>
+             		<li>
+             			<label for="format">Format *</label>
+    				<select name="format" id="format">
+            			{options:format}
+                		<option value="{option_value}"{selected}>{option_name}</option>
+            			{/options:format}
+            		</select>
+             		</li>
+             		<li>
+             			<label for="max_players">Maximum Numbers of Players *</label>
+             			<input class="small" name="max_players" id="max_players"> 
+             		</li>
+             	</ul>
+             	<ul>
+             		<li>
+             			<label>Registration End Time & Date *</label>
+						<input type="text" id="datepicker2" name="reg_end_date">
+    				<select name="reg_end_time" id="reg_end_time">
+            			{options:reg_end_time}
+                		<option value="{option_value}"{selected}>{option_name}</option>
+            			{/options:reg_end_time}
+            		</select>
+    				<select name="reg_end_time_format" id="reg_end_time_format">
+            			{options:reg_end_time_format}
+                		<option value="{option_value}"{selected}>{option_name}</option>
+            			{/options:reg_end_time_format}
+            		</select>             		
+            		</li>
+             		<li>
+             			<label>Require Handicap?</label>
+             			<input class="" type="radio" name="yes" id="yes">Yes<br />
+             			Will all golfers be required to have a known handicap?
+             		</li>
+             		<li>
+             			<label>Require GHIN?</label>
+             			<input class="" type="radio" name="yes" id="yes">Yes<br />
+             			Require Golf Handicap Information Network?
+             		</li>
+             	</ul>
+
+			    <div class="page_nav">
+    				<a href="#section_4" class="next form-button">Next</a>
+    				<a href="#section_2" class="form-button">Back</a>
+    			</div>
+
+      </fieldset>
+
+      <fieldset id="section_4">
+				<h2>Step 4. Golf Course Details</h2>
+				<ul>
+            		<li>
+            			<label for="golf-course-information">Golf Course Information</label>
+             			<input class="medium" type="text" name="golf-course-information" id="golf-course-information">
+            		</li>
+            		<li>
+            			<label for="course_address_1">Address 1</label>
+             			<input class="medium" type="text" name="course_address_1" id="course_address_1">
+            		</li>
+            		<li>
+            			<label for="course_address_2">Address 2</label>
+             			<input class="medium" type="text" name="course_address_2" id="course_address_2">
+            		</li>
+            		<li>
+            			<label for="course_city">City</label>
+             			<input class="medium" type="text" name="course_city" id="course_city">
+            		</li>
+             		<li>
+             			<label for="course_state">State</label>
+    				<select name="course_state" id="course_state">
+            			{options:course_state}
+                		<option value="{option_value}"{selected}>{option_name}</option>
+            			{/options:course_state}
+            		</select>
+             		</li>
+            		<li>
+            			<label for="course_postal_code">Postal Code</label>
+             			<input class="medium" type="text" name="course_postal_code" id="course_postal_code">
+            		</li>
+             		<li>
+             			<label for="course_type">Course Type</label>
+    				<select name="course_type" id="course_type">
+            			{options:course_type}
+                		<option value="{option_value}"{selected}>{option_name}</option>
+            			{/options:course_type}
+            		</select>
+             		</li>
+             	</ul>
+			    <div class="page_nav">
+    				<a href="#section_5" class="next form-button">Next</a>
+    				<a href="#section_3" class="form-button">Back</a>
+    			</div>
+
+      </fieldset>
+      <fieldset id="section_5">
+  			<h2>Step 5. Fundraising details</h2>
+  			
+  				<input type="hidden" name="title" id="title" value="{current_time format='%M %j%S %Y'}" maxlength="100" onkeyup="liveUrlTitle();">
+  				<input type="hidden" name="url_title" id="url_title" value="">
+  				<input type="hidden" name="entry_date" id="entry_date" value="{entry_date}">
+
+  				<div class="fields" id="sortable">
+  				<div class="field"><!--THIS IS A MATRIX ROW-->
+
+  				{!-- NEW ROW --}
+  				<input class="medium" type="hidden" name="fundraising_organizer[row_order][]" value="row_new_0">
+  				<label>Fundraising Name</label>
+  				<input class="medium" type="text" name="fundraising_organizer[row_new_0][col_id_10]" />
+  				<label>Address 1</label>
+  				<input class="medium" type="text" name="fundraising_organizer[row_new_0][col_id_11]" />
+  				<label>Address 2</label>
+  				<input class="medium" type="text" name="fundraising_organizer[row_new_0][col_id_12]" />
+  				<label>City</label>
+  				<input class="medium" type="text" name="fundraising_organizer[row_new_0][col_id_13]" />
+  				<select name="State">
+  				<option value="AL">Alabama</option>
+  					<option value="AK">Alaska</option>
+  					<option value="AZ">Arizona</option>
+  					<option value="AR">Arkansas</option>
+  					<option value="CA">California</option>
+  					<option value="CO">Colorado</option>
+  					<option value="CT">Connecticut</option>
+  					<option value="DE">Delaware</option>
+  					<option value="DC">Dist of Columbia</option>
+  					<option value="FL">Florida</option>
+  					<option value="GA">Georgia</option>
+  					<option value="HI">Hawaii</option>
+  					<option value="ID">Idaho</option>
+  					<option value="IL">Illinois</option>
+  					<option value="IN">Indiana</option>
+  					<option value="IA">Iowa</option>
+  					<option value="KS">Kansas</option>
+  					<option value="KY">Kentucky</option>
+  					<option value="LA">Louisiana</option>
+  					<option value="ME">Maine</option>
+  					<option value="MD">Maryland</option>
+  					<option value="MA">Massachusetts</option>
+  					<option value="MI">Michigan</option>
+  					<option value="MN">Minnesota</option>
+  					<option value="MS">Mississippi</option>
+  					<option value="MO">Missouri</option>
+  					<option value="MT">Montana</option>
+  					<option value="NE">Nebraska</option>
+  					<option value="NV">Nevada</option>
+  					<option value="NH">New Hampshire</option>
+  					<option value="NJ">New Jersey</option>
+  					<option value="NM">New Mexico</option>
+  					<option value="NY">New York</option>
+  					<option value="NC">North Carolina</option>
+  					<option value="ND">North Dakota</option>
+  					<option value="OH">Ohio</option>
+  					<option value="OK">Oklahoma</option>
+  					<option value="OR">Oregon</option>
+  					<option value="PA">Pennsylvania</option>
+  					<option value="RI">Rhode Island</option>
+  					<option value="SC">South Carolina</option>
+  					<option value="SD">South Dakota</option>
+  					<option value="TN">Tennessee</option>
+  					<option value="TX">Texas</option>
+  					<option value="UT">Utah</option>
+  					<option value="VT">Vermont</option>
+  					<option value="VA">Virginia</option>
+  					<option value="WA">Washington</option>
+  					<option value="WV">West Virginia</option>
+  					<option value="WI">Wisconsin</option>
+ 					<option value="WY">Wyoming</option>
+  				</select>
+  				<label>Postal Code</label>
+  				<input class="medium" type="text" name="fundraising_organizer[row_new_0][col_id_15]" />
+  				<label>Website</label>
+  				<input class="medium" type="text" name="fundraising_organizer[row_new_0][col_id_16]" />
+
+  			</div>
+  			</div>
+
+  			<!-- add later
+  			<div class="buttons">
+    				<input id="new" type="button" value="add row">       
+  			</div> -->
+
+			    <div class="page_nav">
+    				<a href="#section_6" class="next form-button">Next</a>
+    				<a href="#section_4" class="form-button">Back</a>
+    			</div>
+
+      </fieldset>
+      <fieldset id="section_6">
+  			<h2>Step 6. Organizer details</h2>
+  			
+  			<ul>
+  				<li>
+  					<label for="tournament_organizer_name_1">Tournament Organizer 1</label>
+  					<input class="medium" type="text" name="tournament_organizer_name_1" id="tournament_organizer_name_1">
+  				</li>
+  				<li>
+  					<label for="tournament_organizer_name_2">Tournament Organizer 2</label>
+  					<input class="medium" type="text" name="tournament_organizer_name_2" id="tournament_organizer_name_2">
+  				</li>
+  				<li>
+  					<label for="tournament_organizer_name_3">Tournament Organizer 3</label>
+  					<input class="medium" type="text" name="tournament_organizer_name_3" id="tournament_organizer_name_3">
+  				</li>
+
+  			</ul>
+
+  				<!-- do not delete 
+  				<div class="fields" id="sortable">
+  				<div class="field">
+
+  				<input type="hidden" name="tournament_organizer[row_order][]" value="row_new_0">
+  				<label for="org_name_label">Tournament Organizer Name</label>
+  				<input type="hidden" name="tournament_organizer[row_new_0][col_id_1]" />
+  				<input type="text" name="tournament_organizer[row_new_0][col_id_2]" />
+  				<input type="fieldpack_checkboxes" name="tournament_organizer[row_new_0][col_id_3]" />
+
+  				<label for="org_name_label">Tournament Organizer Phone</label>
+  				<input type="hidden" name="tournament_organizer[row_new_0][col_id_4]" />
+  				<input type="text" name="tournament_organizer[row_new_0][col_id_5]" />
+  				<input type="fieldpack_checkboxes" name="tournament_organizer[row_new_0][col_id_6]" />
+
+  				<label for="org_name_label">Tournament Organizer Email</label>
+  				<input type="hidden" name="tournament_organizer[row_new_0][col_id_7]" />
+  				<input type="text" name="tournament_organizer[row_new_0][col_id_8]" />
+  				<input type="fieldpack_checkboxes" name="tournament_organizer[row_new_0][col_id_9]" />		
+  			
+  				</div>
+  				</div>	
+  				-->
+  	
+  			<!-- add later
+  			<div class="buttons">
+    				<input id="new" type="button" value="add row">       
+  			</div> -->
+
+			    <div class="page_nav">
+    				<a href="#section_7" class="next-section form-button">Next</a>
+    				<a href="#section_5" class="next-section form-button">Back</a>
+    			</div>
+      </fieldset>
+      <fieldset id="section_7">
+  			<h2>Step 7. Tournament Add-ons</h2>
+  				<p>On this screen, add optional packages and opportunities that are available to tournament participants for purchase. Examples: mulligan, lunch, dinner, putting contest, skins contest , etc.</p>
+  	
+  			<ul>
+  				<li>
+  					<label for="tournament_add_on_1">Add-on 1</label>
+  					<input class="medium" type="text" name="tournament_organizer_name_1" id="tournament_organizer_name_1">
+  				</li>
+  				<li>
+  					<label for="tournament_add_on_2">Add-on 2</label>
+  					<input class="medium" type="text" name="tournament_organizer_name_2" id="tournament_organizer_name_2">
+  				</li>
+  				<li>
+  					<label for="tournament_add_on_3">Add-on 3</label>
+  					<input class="medium" type="text" name="tournament_organizer_name_3" id="tournament_organizer_name_3">
+  				</li>
+
+  			</ul>
+  	
+	
+				<!-- do not delete<div class="fields" id="sortable">
+				<div class="field">
+	
+				<label for="org_name_label">Tournament Organizer Name</label>
+				<input type="hidden" name="tournament_add_on[row_order][]" value="row_new_0">
+				<input type="hidden" name="tournament_add_on[row_new_0][col_id_17]" />
+				<input type="text" name="tournament_add_on[row_new_0][col_id_18]" />
+	
+				</div>
+				</div>	-->
+	
+			<!-- add later
+			<div class="buttons">
+  				<input id="new" type="button" value="add row">       
+			</div> -->
+	
+			    <div class="page_nav">
+    				<a href="#section_8" class="next form-button">Next</a>
+    				<a href="#section_6" class=" form-button">Back</a>
+    			</div>
+
+      </fieldset>
+      <fieldset id="section_8">
+  			<h2>Step 8. Tournament Fee Information</h2>
+  			<p>Enter the tournament entry and other fees that will display on the tournament website. Each tournament entry will include a Convenience Fee of $5.00 plus 4%. Each add-on purchase will include a Convenience Fee of 4%. </p>
+				<ul>
+					<li>
+						<label for="convenience_fees">Player pays Convenience Fees</label>
+						<input type="radio" name="convenience_fees" value="Player pays Convenience Fees">
+						<label for="convenience_fees">Tournament pays Convenience Fees</label>
+						<input type="radio" name="convenience_fees" value="Tournament pays Convenience Fees">
+					</li>
+				</ul>
+				<ul>
+					<li>
+						<label for="tax_deductible_amount">Tax Deductible Amount</label>
+						<input class="medium" type="text" name="tax_deductible_amount" id="tax_deductible_amount">
+					</li>
+				</ul>
+				<ul>
+					<li>
+						<label>Tournament Entry Fee/Player</label>
+						<input class="medium" type="text" name="tournament_fee_entry" id="tournament_fee_entry">
+					</li>
+					<li>
+						<label for="tournament_fee_add_on_1">Add-On 1 Fee/Player</label>
+						<input class="medium" type="text" name="tournament_fee_add_on_1" id="tournament_fee_add_on_1">
+					</li>
+					<li>
+						<label for="tournament_fee_add_on_2">Add-On 2 Fee/Player</label>
+						<input class="medium" type="text" name="tournament_fee_add_on_2" id="tournament_fee_add_on_2">
+					</li>
+					<li>
+						<label for="tournament_fee_add_on_3">Add-On Etc. Fee/Player</label>
+						<input class="medium" type="text" name="tournament_fee_add_on_3" id="tournament_fee_add_on_3">
+					</li>				
+				</ul>
+			    <div class="page_nav">
+    				<a href="#section_9" class="next form-button">Next</a>
+    				<a href="#section_7" class="form-button">Back</a>
+    			</div>
+      </fieldset>
+      <fieldset id="section_9">
+  			<h2>Step 9. Tournament Sponsorships</h2>
+  			<p>Brief description</p>
+				
+				<div class="fields" id="sortable">
+  				<div class="field"><!--THIS IS A MATRIX ROW-->
+
+  				<ul>
+  					<li>
+  						<label for="tournament_sponsorships">Sponsorship Level Name</label>
+  						<em>(ex. Gold, Silver, Bronze)</em></label>
+  						<input type="text" name="tournament_sponsorships[row_new_0][col_id_19]" />
+  					</li>
+  					<li>
+  						<label for="tournament_sponsorships">Sponsorship Inclusions/Benefits<br />
+  						<em>(ex. Title sponsor of banquet, on-course advertising signage)</em></label>
+  						<input type="text" name="tournament_sponsorships[row_new_0][col_id_20]" />
+  					</li>
+  					<li>
+  						<label>Number of Complimentary Players included</label>
+  						<input type="text" name="tournament_sponsorships[row_new_0][col_id_21]" />
+  					</li>
+  					<li>
+  						<label>Sponsorship Cost</label>
+  						<input type="text" name="tournament_sponsorships[row_new_0][col_id_22]" />
+  					</li>
+  					<li>
+  						<label>Number of Sponsorships Available at this Level</label>
+  						<input type="text" name="tournament_sponsorships[row_new_0][col_id_23]" />
+  					</li>
+  				</ul>
+  				<div>Each tournament entry will include a Convenience Fee of $5.00 plus 4%. Each add-on purchase will include a Convenience Fee of 4%.</div>
+  				<ul>
+  					<li><label>Additional Option 1</label>
+  						<input type="text" name="tournament_sponsorships[row_new_0][col_id_24]" />
+  					</li>
+  					<li><label>Additional Option 1</label>
+  						<input type="text" name="tournament_sponsorships[row_new_0][col_id_25]" />
+  					</li>
+  					<li><label>Additional Option 1</label>
+  						<input type="text" name="tournament_sponsorships[row_new_0][col_id_26]" />
+  					</li>
+  					<li><label>Additional Option 1</label>
+  						<input type="text" name="tournament_sponsorships[row_new_0][col_id_27]" />
+  					</li>
+  				</ul>
+  				
+  				</div>
+				</div>
+				
+  			<!-- add later
+  			<div class="buttons">
+    				<input id="new" type="button" value="add row">       
+  			</div> -->
+				
+			    <div class="page_nav">
+    				<a href="#section_10" class="next form-button">Next</a>
+    				<a href="#section_8" class="form-button">Back</a>
+    			</div>
+      </fieldset>
+      <fieldset id="section_10">
+    			<h2>Step 10. Policies and Event Notes</h2>
+    			<ul>
+    				<li>
+    					<label for="refund_and_cancellation_policy">Refund and Cancellation Policy</label>
+    					<textarea class="" name="refund_and_cancellation_policy" id="refund_and_cancellation_policy"></textarea>
+    				</li>
+    				<li>
+    					<label>Schedule and Event Notes</label>
+    					<textarea class="" name="schedule_and_event_notes" id="schedule_and_event_notes"></textarea>
+    				</li>
+    			</ul>
+			    <div class="page_nav">
+    				<a href="#section_11" class="next form-button">Next</a>
+    				<a href="#section_9" class="form-button">Back</a>
+    			</div>
+      </fieldset>
+      <fieldset id="section_11">
+  			<h2>Step 11. Extra Participation Information</h2>
+  			<p>By default we will collect names and e-mail addresses for all tournament participants. What other information would you like to collect about each participant? (Examples: Shirt size, shoe size, glove hand and size, dog's name, etc.)</p>
+  			<ul>
+  				<li>
+  					<label for="additional_information_1">Additional Information 1</label>
+  					<input class="medium" type="text" name="additional_information_1" id="additional_information_1">
+  				</li>
+  				<li>
+  					<label for="additional_information_2">Additional Information 2</label>
+  					<input class="medium" type="text" name="additional_information_2" id="additional_information_2">
+  				</li>
+  				<li>
+  					<label for="additional_information_3">Additional Information 3</label>
+  					<input class="medium" type="text" name="additional_information_3" id="additional_information_3">
+  				</li>
+  				<li>
+  					<label for="additional_information_4">Additional Information 5</label>
+  					<input class="medium" type="text" name="additional_information_4" id="additional_information_4">
+  				</li>
+  			</ul>
+			
+			    <div class="page_nav">
+    				<a href="#section_12" class="next form-button">Next</a>
+    				<a href="#section_10" class="form-button">Back</a>
+    			</div>
+      </fieldset>
+      <fieldset id="section_12">
+  			<h2>Step 12. Tournament Logos and Photos</h2>
+				<ul>
+					<li><input type="file" name="image_upload"></li>
+					<li><input type="file" name="image_upload"></li>
+					<li><input type="file" name="image_upload"></li>
+					<li><input type="file" name="image_upload"></li>
+				</ul>
+
+			    <div class="page_nav">
+            <input type="submit" value="Submit Form">
+
+    				<a href="#section_11" class="form-button">Back</a>
+    			</div>
+    			
+    			
+      </fieldset>
+		{/exp:channel:form}
+
+	</div>
+			
+
+        </section>
+      <div class="clear"></div>
+    </section>
+  </section>
+</section>
+
+ {embed='includes/footer'}

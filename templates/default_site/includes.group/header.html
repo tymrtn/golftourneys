@@ -1,0 +1,14 @@
+    <header>
+        <section class="wrap">
+            <a href="{site_url}"><logo><img src="{site_url}images/logo.png" /></logo></a>
+            <div id="header-right">
+                <div class="social"></div>
+				{exp:search:simple_form channel="content|tournament|blog|Zoo Visitor Members" result_page="search/results" search_in="everywhere"}
+	                <input type="text" class="medium" name="keywords" id="keywords" value="" size="18" maxlength="100">
+                	<input type="submit" value="SEARCH" class="form-button button">
+				{/exp:search:simple_form} 
+
+            </div>
+            <div class="clear"></div>
+        </section>
+    </header>
